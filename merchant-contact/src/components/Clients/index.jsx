@@ -2,6 +2,8 @@ import React from 'react';
 import faker from 'faker';
 import Client from 'components/Client';
 
+const imageOld = [];
+
 const Clients = () => {
     faker.locale = "fr";
     const clientsList = Array.from({ length: 100 }, () => ({
@@ -9,10 +11,8 @@ const Clients = () => {
         firstName: faker.name.firstName(),
         lastName: faker.name.lastName(),
         phone: faker.phone.phoneNumber(),
-        imageUrl: faker.image.imageUrl(),
+        imageUrl: faker.image.avatar(),
     }));
-
-    console.log(clientsList);
 
     return (
         <ul className="row">

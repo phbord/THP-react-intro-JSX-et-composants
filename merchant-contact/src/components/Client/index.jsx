@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 
 const Client = ({ data }) => {
     const { firstName, lastName, phone, imageUrl } = data;
@@ -12,7 +13,7 @@ const Client = ({ data }) => {
                     <a href={`mailto:${lastName.toLowerCase()}.${firstName.toLowerCase()}@gmail.com`} 
                         className="btn btn-primary me-2">Envoyer un message</a>
                     <a href={`callto:${phone}`} 
-                        className="btn btn-secondary">${phone}</a>
+                        className="btn btn-secondary">Téléphoner</a>
                 </div>
             </div>
         </li>
